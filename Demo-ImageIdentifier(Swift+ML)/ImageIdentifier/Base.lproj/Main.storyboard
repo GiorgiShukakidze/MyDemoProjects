@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XUO-tj-OGP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageIdentifier__my_try_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="brZ-Mn-r0u">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="f1p-1g-5U2">
+                                <rect key="frame" x="20" y="802" width="204.5" height="60"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FeP-PG-dka">
+                                    <rect key="frame" x="0.0" y="0.0" width="204.5" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add photo to identify." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8R4-Fc-vsg">
+                                            <rect key="frame" x="20" y="20" width="164.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="8R4-Fc-vsg" secondAttribute="trailing" constant="20" symbolic="YES" id="GWw-MS-ZNp"/>
+                                        <constraint firstItem="8R4-Fc-vsg" firstAttribute="top" secondItem="FeP-PG-dka" secondAttribute="top" constant="20" symbolic="YES" id="mxK-Wd-NY5"/>
+                                        <constraint firstItem="8R4-Fc-vsg" firstAttribute="leading" secondItem="FeP-PG-dka" secondAttribute="leading" constant="20" symbolic="YES" id="yKM-ID-C9A"/>
+                                        <constraint firstAttribute="bottom" secondItem="8R4-Fc-vsg" secondAttribute="bottom" constant="20" symbolic="YES" id="zdR-xZ-W2n"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f1p-1g-5U2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0ie-En-ZEr"/>
+                            <constraint firstItem="brZ-Mn-r0u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0m3-zq-Zeh"/>
+                            <constraint firstAttribute="bottom" secondItem="brZ-Mn-r0u" secondAttribute="bottom" id="4R2-Pq-KAj"/>
+                            <constraint firstItem="f1p-1g-5U2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7fS-EB-QBP"/>
+                            <constraint firstItem="brZ-Mn-r0u" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="D5j-Ob-VIF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="f1p-1g-5U2" secondAttribute="trailing" constant="16" id="JDd-vl-qhI"/>
+                            <constraint firstItem="brZ-Mn-r0u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NwR-7K-HnG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="30J-pE-epY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Rje-zO-40p">
+                            <color key="tintColor" red="0.7383347603" green="0.023902095049999999" blue="0.78848752690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="cameraTapped:" destination="BYZ-38-t0r" id="ysY-v1-yq2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="photoView" destination="brZ-Mn-r0u" id="c2t-Zg-4Mt"/>
+                        <outlet property="textLabel" destination="8R4-Fc-vsg" id="feY-1Q-PEK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XkT-b1-rUg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XUO-tj-OGP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0iz-Wh-lkD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IQd-5K-Zpd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Egg-Kq-pG0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+</document>

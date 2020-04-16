@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9V4-vg-GFN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HotDogorNot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bYU-bG-DI0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="788"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Photo of Hot Dog Yet!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weL-bK-5cR">
+                                <rect key="frame" x="0.0" y="423" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZYc-Vt-vHF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                <color key="textColor" red="0.1137254902" green="0.60784313729999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take photo from camera." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmg-KG-PGU">
+                                <rect key="frame" x="95" y="473" width="224" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8bl-bE-sWX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.1137254902" green="0.60784313729999995" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bYU-bG-DI0" secondAttribute="bottom" constant="20" symbolic="YES" id="4gr-N1-Hjx"/>
+                            <constraint firstItem="weL-bK-5cR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5H6-nV-0FS"/>
+                            <constraint firstItem="bYU-bG-DI0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IFQ-pF-5rn"/>
+                            <constraint firstItem="bYU-bG-DI0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a5c-Pw-rcS"/>
+                            <constraint firstItem="weL-bK-5cR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bcR-f5-rft"/>
+                            <constraint firstItem="lmg-KG-PGU" firstAttribute="top" secondItem="weL-bK-5cR" secondAttribute="top" constant="50" id="cZ6-Xx-oiI"/>
+                            <constraint firstItem="lmg-KG-PGU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ogA-0F-zZO"/>
+                            <constraint firstItem="weL-bK-5cR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rsl-K5-viE"/>
+                            <constraint firstItem="bYU-bG-DI0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w5q-QO-0Jt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="beC-5T-hGw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Jom-O5-SZC">
+                            <color key="tintColor" red="0.0" green="0.81176470590000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="cameraTapped:" destination="BYZ-38-t0r" id="jbk-8a-vvb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="chosenPhotoView" destination="bYU-bG-DI0" id="Whu-1O-zJ3"/>
+                        <outletCollection property="noPhotoMessage" destination="weL-bK-5cR" collectionClass="NSMutableArray" id="4Ef-vW-6ui"/>
+                        <outletCollection property="noPhotoMessage" destination="lmg-KG-PGU" collectionClass="NSMutableArray" id="xz3-lc-l0e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="114.50892857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VRD-wT-LJz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9V4-vg-GFN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JcJ-6z-rtI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="O4P-Up-fE9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nzJ-aQ-s8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+</document>

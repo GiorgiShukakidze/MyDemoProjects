@@ -1,0 +1,379 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB78209823F05D3C00658C63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78209723F05D3C00658C63 /* AppDelegate.swift */; };
+		CB78209A23F05D3C00658C63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78209923F05D3C00658C63 /* SceneDelegate.swift */; };
+		CB78209C23F05D3C00658C63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB78209B23F05D3C00658C63 /* ContentView.swift */; };
+		CB78209E23F05D3D00658C63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB78209D23F05D3D00658C63 /* Assets.xcassets */; };
+		CB7820A123F05D3D00658C63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB7820A023F05D3D00658C63 /* Preview Assets.xcassets */; };
+		CB7820A423F05D3D00658C63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7820A223F05D3D00658C63 /* LaunchScreen.storyboard */; };
+		CB7820AD23F066CA00658C63 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7820AC23F066CA00658C63 /* NetworkManager.swift */; };
+		CB7820AF23F066F200658C63 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7820AE23F066F200658C63 /* PostData.swift */; };
+		CB7820B223F07B7000658C63 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7820B123F07B7000658C63 /* DetailView.swift */; };
+		CB7820B423F0881E00658C63 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7820B323F0881E00658C63 /* WebView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CB78209423F05D3C00658C63 /* Hacker News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hacker News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB78209723F05D3C00658C63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB78209923F05D3C00658C63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CB78209B23F05D3C00658C63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CB78209D23F05D3D00658C63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB7820A023F05D3D00658C63 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CB7820A323F05D3D00658C63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB7820A523F05D3D00658C63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB7820AC23F066CA00658C63 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CB7820AE23F066F200658C63 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		CB7820B123F07B7000658C63 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		CB7820B323F0881E00658C63 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB78209123F05D3C00658C63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB78208B23F05D3C00658C63 = {
+			isa = PBXGroup;
+			children = (
+				CB78209623F05D3C00658C63 /* Hacker News */,
+				CB78209523F05D3C00658C63 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB78209523F05D3C00658C63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB78209423F05D3C00658C63 /* Hacker News.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB78209623F05D3C00658C63 /* Hacker News */ = {
+			isa = PBXGroup;
+			children = (
+				CB78209723F05D3C00658C63 /* AppDelegate.swift */,
+				CB78209923F05D3C00658C63 /* SceneDelegate.swift */,
+				CB7820AB23F066A900658C63 /* Model */,
+				CB7820B023F07B5600658C63 /* Views */,
+				CB78209D23F05D3D00658C63 /* Assets.xcassets */,
+				CB7820A223F05D3D00658C63 /* LaunchScreen.storyboard */,
+				CB7820A523F05D3D00658C63 /* Info.plist */,
+				CB78209F23F05D3D00658C63 /* Preview Content */,
+			);
+			path = "Hacker News";
+			sourceTree = "<group>";
+		};
+		CB78209F23F05D3D00658C63 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CB7820A023F05D3D00658C63 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CB7820AB23F066A900658C63 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB7820AC23F066CA00658C63 /* NetworkManager.swift */,
+				CB7820AE23F066F200658C63 /* PostData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB7820B023F07B5600658C63 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB78209B23F05D3C00658C63 /* ContentView.swift */,
+				CB7820B123F07B7000658C63 /* DetailView.swift */,
+				CB7820B323F0881E00658C63 /* WebView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB78209323F05D3C00658C63 /* Hacker News */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB7820A823F05D3D00658C63 /* Build configuration list for PBXNativeTarget "Hacker News" */;
+			buildPhases = (
+				CB78209023F05D3C00658C63 /* Sources */,
+				CB78209123F05D3C00658C63 /* Frameworks */,
+				CB78209223F05D3C00658C63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hacker News";
+			productName = "Hacker News";
+			productReference = CB78209423F05D3C00658C63 /* Hacker News.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB78208C23F05D3C00658C63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Giorgi Shukakidze";
+				TargetAttributes = {
+					CB78209323F05D3C00658C63 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = CB78208F23F05D3C00658C63 /* Build configuration list for PBXProject "Hacker News" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB78208B23F05D3C00658C63;
+			productRefGroup = CB78209523F05D3C00658C63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB78209323F05D3C00658C63 /* Hacker News */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB78209223F05D3C00658C63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB7820A423F05D3D00658C63 /* LaunchScreen.storyboard in Resources */,
+				CB7820A123F05D3D00658C63 /* Preview Assets.xcassets in Resources */,
+				CB78209E23F05D3D00658C63 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB78209023F05D3C00658C63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB7820AF23F066F200658C63 /* PostData.swift in Sources */,
+				CB7820B223F07B7000658C63 /* DetailView.swift in Sources */,
+				CB7820AD23F066CA00658C63 /* NetworkManager.swift in Sources */,
+				CB78209823F05D3C00658C63 /* AppDelegate.swift in Sources */,
+				CB78209A23F05D3C00658C63 /* SceneDelegate.swift in Sources */,
+				CB78209C23F05D3C00658C63 /* ContentView.swift in Sources */,
+				CB7820B423F0881E00658C63 /* WebView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CB7820A223F05D3D00658C63 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB7820A323F05D3D00658C63 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB7820A623F05D3D00658C63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB7820A723F05D3D00658C63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB7820A923F05D3D00658C63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Hacker News/Preview Content\"";
+				DEVELOPMENT_TEAM = L3N5YCXU3C;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Hacker News/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gshukakidze.Hacker-News";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB7820AA23F05D3D00658C63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Hacker News/Preview Content\"";
+				DEVELOPMENT_TEAM = L3N5YCXU3C;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Hacker News/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gshukakidze.Hacker-News";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB78208F23F05D3C00658C63 /* Build configuration list for PBXProject "Hacker News" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB7820A623F05D3D00658C63 /* Debug */,
+				CB7820A723F05D3D00658C63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB7820A823F05D3D00658C63 /* Build configuration list for PBXNativeTarget "Hacker News" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB7820A923F05D3D00658C63 /* Debug */,
+				CB7820AA23F05D3D00658C63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB78208C23F05D3C00658C63 /* Project object */;
+}
