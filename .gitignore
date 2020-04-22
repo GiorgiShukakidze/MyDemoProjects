@@ -1,5 +1,6 @@
 # Projectwide
 Keys.swift
+UserCredentials.swift
 GoogleService-Info.plist
 .DS_Store
 .AppleDouble
