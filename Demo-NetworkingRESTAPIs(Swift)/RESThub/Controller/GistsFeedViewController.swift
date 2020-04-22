@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GistsViewController: UIViewController {
+class GistsFeedViewController: UIViewController {
     
     var gistsFeed = [Gist]()
     @IBOutlet weak var feedTableView: UITableView!
@@ -16,7 +16,13 @@ class GistsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        navigationController?.navigationBar.isHidden = true
+                
         DataService.shared.fetchGists { (result) in
             DispatchQueue.main.async {
                 switch result {
@@ -30,22 +36,6 @@ class GistsViewController: UIViewController {
         }
     }
     
-    //MARK: - Create new Gist
-    @IBAction func createNewGist(_ sender: UIButton) {
-        
-        DataService.shared.createNewGist { (result) in
-            DispatchQueue.main.async {
-                switch result {
-                case .success:
-                    self.showResultAlert(title: "Gist Created", message: "Successfully created test gist")
-                case .failure(let error):
-                    self.showResultAlert(title: "Ups...", message: "Could not create gist. Try again.")
-                    print(error.localizedDescription)
-                }
-            }
-        }
-    }
-    
     //MARK: - Utility functions
     
     func showResultAlert(title: String, message: String) {
@@ -54,11 +44,12 @@ class GistsViewController: UIViewController {
         
         present(alert, animated: true, completion: nil)
     }
+
 }
 
 //MARK: - Table View Delegate and Data Source methods
 
-extension GistsViewController: UITableViewDataSource, UITableViewDelegate {
+extension GistsFeedViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return gistsFeed.count
