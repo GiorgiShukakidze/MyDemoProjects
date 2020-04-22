@@ -10,12 +10,13 @@
 		CB5E5CC924505AD2003041CB /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5E5CC824505AD2003041CB /* Gist.swift */; };
 		CB87BF0F244F239B0057BF16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87BF0E244F239B0057BF16 /* AppDelegate.swift */; };
 		CB87BF11244F239B0057BF16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87BF10244F239B0057BF16 /* SceneDelegate.swift */; };
-		CB87BF13244F239B0057BF16 /* GistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87BF12244F239B0057BF16 /* GistsViewController.swift */; };
+		CB87BF13244F239B0057BF16 /* GistsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87BF12244F239B0057BF16 /* GistsFeedViewController.swift */; };
 		CB87BF16244F239B0057BF16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB87BF14244F239B0057BF16 /* Main.storyboard */; };
 		CB87BF18244F239C0057BF16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB87BF17244F239C0057BF16 /* Assets.xcassets */; };
 		CB87BF1B244F239C0057BF16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB87BF19244F239C0057BF16 /* LaunchScreen.storyboard */; };
 		CB87BF23244F43500057BF16 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87BF22244F43500057BF16 /* DataService.swift */; };
-		CBB5B0B82450B9DE00FFC6D5 /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5B0B72450B9DE00FFC6D5 /* UserCredentials.swift */; };
+		CBB5B0C02450C67000FFC6D5 /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5B0BF2450C67000FFC6D5 /* UserCredentials.swift */; };
+		CBB5B0C22450C99B00FFC6D5 /* NewGistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB5B0C12450C99B00FFC6D5 /* NewGistViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +24,14 @@
 		CB87BF0B244F239B0057BF16 /* RESThub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RESThub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB87BF0E244F239B0057BF16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB87BF10244F239B0057BF16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB87BF12244F239B0057BF16 /* GistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsViewController.swift; sourceTree = "<group>"; };
+		CB87BF12244F239B0057BF16 /* GistsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsFeedViewController.swift; sourceTree = "<group>"; };
 		CB87BF15244F239B0057BF16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB87BF17244F239C0057BF16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB87BF1A244F239C0057BF16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB87BF1C244F239C0057BF16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB87BF22244F43500057BF16 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		CBB5B0B72450B9DE00FFC6D5 /* UserCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentials.swift; sourceTree = "<group>"; };
+		CBB5B0BF2450C67000FFC6D5 /* UserCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentials.swift; sourceTree = "<group>"; };
+		CBB5B0C12450C99B00FFC6D5 /* NewGistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGistViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,15 +51,17 @@
 				CB87BF0E244F239B0057BF16 /* AppDelegate.swift */,
 				CB87BF10244F239B0057BF16 /* SceneDelegate.swift */,
 				CB87BF17244F239C0057BF16 /* Assets.xcassets */,
-				CBB5B0B72450B9DE00FFC6D5 /* UserCredentials.swift */,
+				CBB5B0BF2450C67000FFC6D5 /* UserCredentials.swift */,
 			);
-			path = "Supporting Files";
+			name = "Supporting Files";
+			path = "../Supporting Files";
 			sourceTree = "<group>";
 		};
 		CB5E5CCD2450B623003041CB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CB87BF12244F239B0057BF16 /* GistsViewController.swift */,
+				CB87BF12244F239B0057BF16 /* GistsFeedViewController.swift */,
+				CBB5B0C12450C99B00FFC6D5 /* NewGistViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -75,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				CB87BF0D244F239B0057BF16 /* RESThub */,
-				CB5E5CCC2450B616003041CB /* Supporting Files */,
 				CB87BF0C244F239B0057BF16 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +96,7 @@
 			children = (
 				CB5E5CCD2450B623003041CB /* Controller */,
 				CB5E5CCE2450B62D003041CB /* Model */,
+				CB5E5CCC2450B616003041CB /* Supporting Files */,
 				CB87BF14244F239B0057BF16 /* Main.storyboard */,
 				CB87BF1C244F239C0057BF16 /* Info.plist */,
 				CB87BF19244F239C0057BF16 /* LaunchScreen.storyboard */,
@@ -172,11 +176,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB5E5CC924505AD2003041CB /* Gist.swift in Sources */,
-				CB87BF13244F239B0057BF16 /* GistsViewController.swift in Sources */,
+				CB87BF13244F239B0057BF16 /* GistsFeedViewController.swift in Sources */,
 				CB87BF0F244F239B0057BF16 /* AppDelegate.swift in Sources */,
 				CB87BF11244F239B0057BF16 /* SceneDelegate.swift in Sources */,
 				CB87BF23244F43500057BF16 /* DataService.swift in Sources */,
-				CBB5B0B82450B9DE00FFC6D5 /* UserCredentials.swift in Sources */,
+				CBB5B0C22450C99B00FFC6D5 /* NewGistViewController.swift in Sources */,
+				CBB5B0C02450C67000FFC6D5 /* UserCredentials.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
