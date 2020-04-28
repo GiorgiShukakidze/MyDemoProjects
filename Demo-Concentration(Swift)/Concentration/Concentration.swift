@@ -8,11 +8,11 @@
 
 import Foundation
 
-class Concentration {
+struct Concentration {
     
     var cards = [Card]()
-    var flipCount = 0
-    var score = 0
+    private(set) var flipCount = 0
+    private(set) var score = 0
     let gameTheme: Theme
     let emojis = [
         Theme.Countries: ["🇬🇪","🇫🇮", "🇬🇷", "🇨🇿", "🇱🇷", "🇺🇸", "🇬🇧", "🇧🇷"],
@@ -24,24 +24,27 @@ class Concentration {
     ]
     
     private var flippedCardIndices = [Int]()
-    private var oneAndOnlyFaceUpCardIndex: Int?
+    private var oneAndOnlyFaceUpCardIndex: Int? {
+        get {
+            return cards.indices.filter { cards[$0].isFaceUp }.oneAndOnly
+        }
+        set {
+            for index in cards.indices {
+                cards[index].isFaceUp = (index == newValue)
+            }
+        }
+    }
     
-    func choseCard(at index: Int) {
+    mutating func choseCard(at index: Int) {
         if !cards[index].isMatched {
             if let matchIndex = oneAndOnlyFaceUpCardIndex, matchIndex != index {
-                // Match cards
-                if cards[index].identifier == cards[matchIndex].identifier {
+                if cards[index] == cards[matchIndex] {
                     cards[index].isMatched = true
                     cards[matchIndex].isMatched = true
                 }
                 cards[index].isFaceUp = true
-                oneAndOnlyFaceUpCardIndex = nil
                 updateScore(forIndex: index)
             } else {
-                for i in cards.indices {
-                    cards[i].isFaceUp = false
-                }
-                cards[index].isFaceUp = true
                 oneAndOnlyFaceUpCardIndex = index
             }
         }
@@ -53,6 +56,14 @@ class Concentration {
         flipCount += 1
     }
     
+    private mutating func updateScore(forIndex index: Int) {
+        if cards[index].isMatched {
+            score += 2
+        } else if flippedCardIndices.firstIndex(of: index) != nil {
+            score -= 1
+        }
+    }
+    
     init(numberOfPairsOfCards: Int) {
         for _ in 1...numberOfPairsOfCards {
             let card = Card()
@@ -62,14 +73,11 @@ class Concentration {
         cards.shuffle()
         gameTheme = Theme.allCases.randomElement()!
     }
-    
-    private func updateScore(forIndex index: Int) {
-        
-        if cards[index].isMatched {
-            score += 2
-        } else if flippedCardIndices.firstIndex(of: index) != nil {
-            score -= 1
-        }
+}
+
+extension Collection {
+    var oneAndOnly: Element? {
+        return count == 1 ? first : nil
     }
 }
 

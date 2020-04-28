@@ -10,21 +10,24 @@ import UIKit
 
 class ConcentrationViewController: UIViewController {
     
-    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
+    private lazy var game = Concentration(numberOfPairsOfCards: numberOfPairs)
+ 
+    private var numberOfPairs: Int {
+            return (cardButtons.count + 1) / 2
+    }
 
-    @IBOutlet weak var flipCountLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet var cardButtons: [UIButton]!
-    @IBOutlet weak var newGameButton: UIButton!
+    @IBOutlet private weak var flipCountLabel: UILabel!
+    @IBOutlet private weak var scoreLabel: UILabel!
+    @IBOutlet private var cardButtons: [UIButton]!
+    @IBOutlet private weak var newGameButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         newGameButton.layer.cornerRadius = 5
-        
     }
 
-    @IBAction func touchCard(_ sender: UIButton) {
+    @IBAction private func touchCard(_ sender: UIButton) {
         if let currentCardIndex = cardButtons.firstIndex(of: sender) {
             game.choseCard(at: currentCardIndex)
             updateViewModel()
@@ -33,14 +36,14 @@ class ConcentrationViewController: UIViewController {
         }
     }
     
-    @IBAction func startNewGame(_ sender: UIButton) {
+    @IBAction private func startNewGame(_ sender: UIButton) {
         game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
         emojiChoices = game.emojis[game.gameTheme]
         
         updateViewModel()
     }
     
-    func updateViewModel() {
+    private func updateViewModel() {
         for index in cardButtons.indices {
             let button = cardButtons[index]
             let card = game.cards[index]
@@ -57,17 +60,17 @@ class ConcentrationViewController: UIViewController {
         scoreLabel.text = "Score: \(game.score)"
     }
     
-    lazy var emojiChoices = game.emojis[game.gameTheme]
+    private lazy var emojiChoices = game.emojis[game.gameTheme]
     
-    var emoji = [Int:String]()
+    private var emoji = [Card:String]()
     
-    func emoji(for card: Card) -> String {
+    private func emoji(for card: Card) -> String {
         
-        if emoji[card.identifier] == nil, emojiChoices!.count > 0 {
-            emoji[card.identifier] = emojiChoices!.remove(at: Int.random(in: 0..<emojiChoices!.count))
+        if emoji[card] == nil, emojiChoices!.count > 0 {
+            emoji[card] = emojiChoices!.remove(at: Int.random(in: 0..<emojiChoices!.count))
         }
         
-        return emoji[card.identifier] ?? "?"
+        return emoji[card] ?? "?"
     }
 }
 

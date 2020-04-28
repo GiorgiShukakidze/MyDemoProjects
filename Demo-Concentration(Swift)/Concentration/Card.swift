@@ -12,11 +12,11 @@ struct Card {
     
     var isFaceUp = false
     var isMatched = false
-    var identifier: Int
+    private var identifier: Int
     
-    static var uniqueIdentifier = 0
+    private static var uniqueIdentifier = 0
     
-    static func generateUiqueIdentifier() -> Int {
+    private static func generateUiqueIdentifier() -> Int {
         uniqueIdentifier += 1
         return uniqueIdentifier
     }
@@ -24,5 +24,14 @@ struct Card {
     init () {
         self.identifier = Card.generateUiqueIdentifier()
     }
-    
+}
+
+extension Card: Hashable {
+    static func == (lhs: Card, rhs: Card) -> Bool {
+        return lhs.identifier == rhs.identifier
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(identifier)
+    }
 }
